@@ -1,0 +1,20 @@
+
+@use 'src/assets/styles/spacings';
+
+.products-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: spacings.$tileMargin;
+  margin-bottom: 4* spacings.$tileMargin;
+
+  .products-controls-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .margin {
+      margin-right: spacings.$tileMargin;
+      margin-left: spacings.$tileMargin;
+    }
+  }
+}

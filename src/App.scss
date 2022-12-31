@@ -1,0 +1,17 @@
+@use 'src/assets/styles/spacings';
+@use 'src/assets/styles/breakpoints';
+
+.app-header {
+  margin-bottom: spacings.$tileMargin;
+}
+
+.app-container {
+  max-width: breakpoints.$xl;
+  margin-left: spacings.$tileMargin;
+  margin-right: spacings.$tileMargin;
+  
+  @media (min-width: breakpoints.$xl) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

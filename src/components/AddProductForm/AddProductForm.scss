@@ -1,0 +1,17 @@
+@use 'src/assets/styles/spacings';
+@use 'src/assets/styles/breakpoints';
+
+.form-group {
+  width: 100%;
+  margin-bottom: spacings.$formGroupMargin;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: breakpoints.$md) {
+    width: 50%;
+  }
+}
+
+.form-submit {
+  margin-top: spacings.$formGroupMargin;
+}

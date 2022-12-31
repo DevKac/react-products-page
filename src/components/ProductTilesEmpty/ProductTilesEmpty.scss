@@ -1,0 +1,7 @@
+@use 'src/assets/styles/spacings';
+
+.product-tiles-empty {
+  width: 100%;
+  text-align: center;
+  margin-top: spacings.$tileMargin;
+}

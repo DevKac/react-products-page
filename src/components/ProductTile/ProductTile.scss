@@ -1,0 +1,61 @@
+@use 'src/assets/styles/spacings';
+@use 'src/assets/styles/breakpoints';
+
+.tile-container {
+  margin: spacings.$tileMargin;
+  
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .tile-image {
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .tile-text {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+
+    .tile-title {
+      font-weight: bold;
+    }
+  }
+
+  &:hover {
+    .tile-image {
+      opacity: 0.3;
+    }
+    
+    .tile-text {
+      opacity: 1;
+    }
+  }
+
+  @media (min-width: breakpoints.$sm) {
+    width: calc(50% - 2*#{spacings.$tileMargin});
+  }
+
+  @media (min-width: breakpoints.$md) {
+    width: calc(25% - 2*#{spacings.$tileMargin});
+
+    .tile-text {
+      left: 0;
+      transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+    }
+  }
+
+  @media (min-width: breakpoints.$lg) {
+    width: calc(20% - 2*#{spacings.$tileMargin});
+  }
+}

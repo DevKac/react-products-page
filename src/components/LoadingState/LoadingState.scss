@@ -1,0 +1,6 @@
+@use 'src/assets/styles/spacings';
+
+.loading-state {
+  text-align: center;
+  margin-top: spacings.$tileMargin;
+}

@@ -1,0 +1,72 @@
+@use 'src/assets/styles/colors';
+
+$uiPadding: 10px;
+$uiBorderRadius: 10px;
+$uiButtonBorderRadius: 15px;
+$uiBackgroundColor: darkgrey;
+$uiFocusBackgroundColor: grey;
+$uiNegativeZIndex: -1;
+
+@mixin body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: colors.$backgroundColor;
+  color: colors.$fontColor;
+}
+
+// @TODO: textarea ma jakiś inny styl, wyrównać
+@mixin input {
+  border: 0;
+  padding: $uiPadding;
+  border-radius: $uiBorderRadius;
+  background-color: $uiBackgroundColor;
+  color: colors.$fontColor;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+@mixin button {
+  appearance: none;
+  -webkit-appearance: none;
+
+  padding: $uiPadding;
+  border: none;
+  background-color: $uiBackgroundColor;
+  color: colors.$fontColor;
+  border-radius: $uiButtonBorderRadius;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $uiFocusBackgroundColor;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background-color: $uiFocusBackgroundColor;
+  }
+}
+
+@mixin select {
+  width: 100%;
+  padding: $uiPadding;
+  border: none;
+  border-radius: $uiBorderRadius;
+  background-color: $uiBackgroundColor;
+  color: colors.$fontColor;
+}
+
+@mixin a {
+  color: colors.$fontColor;
+  text-decoration: none;
+}

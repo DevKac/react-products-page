@@ -1,0 +1,8 @@
+@use 'src/assets/styles/spacings';
+
+.product-tiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: - spacings.$tileMargin;
+}

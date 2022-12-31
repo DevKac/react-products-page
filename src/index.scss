@@ -1,0 +1,22 @@
+@use 'src/assets/styles/colors';
+@use 'src/assets/styles/ui';
+
+body {
+  @include ui.body;
+}
+
+input, textarea {
+  @include ui.input;
+}
+
+button {
+  @include ui.button;
+}
+
+select {
+  @include ui.select;
+}
+
+a {
+  @include ui.a;
+}

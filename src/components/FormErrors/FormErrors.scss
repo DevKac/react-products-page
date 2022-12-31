@@ -1,0 +1,13 @@
+@use 'src/assets/styles/spacings';
+@use 'src/assets/styles/ui';
+@use 'src/assets/styles/colors';
+
+.form-errors {
+  margin-top: - spacings.$formGroupMargin;
+  z-index: ui.$uiNegativeZIndex;
+  padding: ui.$uiPadding;
+  padding-top: 1.5 * ui.$uiPadding;
+  border-bottom-left-radius: ui.$uiBorderRadius;
+  border-bottom-right-radius: ui.$uiBorderRadius;
+  background-color: colors.$errorColor;
+}
